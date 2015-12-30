@@ -45,14 +45,14 @@ class TestVisitSchedule(VisitScheduleConfiguration):
             'instructions': None,
             'requisitions': (
                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),
+                RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),
             ),
             'entries': (
-                EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
             )},
          '2000': {
              'title': '2000',
@@ -69,13 +69,13 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
+                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
              'entries': (
-                 EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
              )},
          '2000A': {
              'title': '2000A',
@@ -92,13 +92,13 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
+                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
              'entries': (
-                 EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
              )},
          '2010A': {
              'title': '2010A',
@@ -115,13 +115,13 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
+                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
              'entries': (
-                 EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
              )},
          '2020A': {
              'title': '2020A',
@@ -138,13 +138,13 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
+                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
              'entries': (
-                 EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
              )},
          '2030A': {
              'title': '2030A',
@@ -161,13 +161,13 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
+                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
+                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
              'entries': (
-                 EntryTuple(10L, u'testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(20L, u'testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 EntryTuple(30L, u'testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
+                 EntryTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
              )},
          },
     )

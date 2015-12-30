@@ -43,7 +43,7 @@ class TestAppConfiguration(BaseAppConfiguration):
         'version': 1,
         'start_datetime': study_start_datetime,
         'end_datetime': study_end_datetime,
-        'add_for_app': 'testing'}
+        'add_for_app': 'edc_testing'}
 
     consent_type_setup = [
         {'app_label': 'edc_consent',
