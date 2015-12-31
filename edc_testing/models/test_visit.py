@@ -1,22 +1,8 @@
 from edc.entry_meta_data.models import MetaDataMixin
-from edc_visit_tracking.models import VisitTrackingModelMixin, PreviousVisitMixin
+from edc_visit_tracking.models import VisitModelMixin, PreviousVisitMixin
 
 
-class TestVisit(MetaDataMixin, PreviousVisitMixin, VisitTrackingModelMixin):
-
-    REQUIRES_PREVIOUS_VISIT = True
-
-    def custom_post_update_entry_meta_data(self):
-        pass
-
-    def get_requires_consent(self):
-        return False
-
-    class Meta:
-        app_label = 'edc_testing'
-
-
-class TestVisit2(MetaDataMixin, PreviousVisitMixin, VisitTrackingModelMixin):
+class TestVisit(MetaDataMixin, PreviousVisitMixin, VisitModelMixin):
 
     REQUIRES_PREVIOUS_VISIT = True
 
@@ -30,7 +16,12 @@ class TestVisit2(MetaDataMixin, PreviousVisitMixin, VisitTrackingModelMixin):
         app_label = 'edc_testing'
 
 
-class TestSubjectVisit(VisitTrackingModelMixin):
+class TestVisit2(MetaDataMixin, PreviousVisitMixin, VisitModelMixin):
+
+    REQUIRES_PREVIOUS_VISIT = True
+
+    def custom_post_update_entry_meta_data(self):
+        pass
 
     def get_requires_consent(self):
         return False
@@ -39,7 +30,7 @@ class TestSubjectVisit(VisitTrackingModelMixin):
         app_label = 'edc_testing'
 
 
-class TestSubjectVisitTwo(VisitTrackingModelMixin):
+class TestSubjectVisit(VisitModelMixin):
 
     def get_requires_consent(self):
         return False
@@ -48,7 +39,16 @@ class TestSubjectVisitTwo(VisitTrackingModelMixin):
         app_label = 'edc_testing'
 
 
-class TestSubjectVisitThree(VisitTrackingModelMixin):
+class TestSubjectVisitTwo(VisitModelMixin):
+
+    def get_requires_consent(self):
+        return False
+
+    class Meta:
+        app_label = 'edc_testing'
+
+
+class TestSubjectVisitThree(VisitModelMixin):
 
     def get_requires_consent(self):
         return False
