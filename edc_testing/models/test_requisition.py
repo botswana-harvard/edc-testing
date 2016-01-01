@@ -2,13 +2,13 @@ from django.db import models
 
 from edc_base.audit_trail import AuditTrail
 from edc_lab.lab_requisition.models import RequisitionModelMixin
-from edc.entry_meta_data.managers import RequisitionMetaDataManager
-
-from .test_visit import TestVisit
-from .test_panel import TestPanel
-from .test_aliquot_type import TestAliquotType
+from edc_meta_data.managers import RequisitionMetaDataManager
 from edc_visit_tracking.models.crf_model_mixin import CrfModelMixin
-from edc_testing.models.test_aliquot import TestAliquot
+
+from .test_aliquot import TestAliquot
+from .test_aliquot_type import TestAliquotType
+from .test_panel import TestPanel
+from .test_visit import TestVisit
 
 
 class TestRequisition(CrfModelMixin, RequisitionModelMixin):

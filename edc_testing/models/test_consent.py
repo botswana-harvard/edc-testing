@@ -4,10 +4,9 @@ from edc_registration.models import RegisteredSubject
 from edc_appointment.models import AppointmentMixin
 from edc_base.model.models import BaseUuidModel
 from edc_consent.models import BaseConsent
-from edc_consent.models.fields import ReviewFieldsMixin, IdentityFieldsMixin
-from edc_consent.models.fields.personal_fields_mixin import PersonalFieldsMixin
-from edc_consent.models.fields.sample_collection_fields_mixin import SampleCollectionFieldsMixin
-from edc_consent.models.fields.vulnerability_fields_mixin import VulnerabilityFieldsMixin
+from edc_consent.models.fields import (
+    ReviewFieldsMixin, IdentityFieldsMixin, PersonalFieldsMixin,
+    SampleCollectionFieldsMixin, VulnerabilityFieldsMixin)
 
 
 class BaseTestConsent(BaseConsent, ReviewFieldsMixin, IdentityFieldsMixin,

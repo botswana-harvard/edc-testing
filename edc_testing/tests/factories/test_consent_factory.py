@@ -8,7 +8,7 @@ from edc_constants.constants import YES, NO
 from ...models import TestConsent, TestConsentWithMixin
 
 
-class BaseConsentBasicsFactory(factory.DjangoModelFactory):
+class BaseConsentFactory(factory.DjangoModelFactory):
     class Meta:
         abstract = True
 
@@ -16,12 +16,6 @@ class BaseConsentBasicsFactory(factory.DjangoModelFactory):
     study_questions = YES
     assessment_score = YES
     consent_copy = YES
-
-
-class BaseConsentFactory(BaseConsentBasicsFactory):
-    class Meta:
-        abstract = True
-
     study_site = '40'
     consent_datetime = timezone.now()
     may_store_samples = YES

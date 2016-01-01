@@ -187,7 +187,7 @@ class TestDspItemBypass(BaseDispatchSyncUuidModel):
         for k, v in may_not_change:
             if k[0] != '_':
                 if getattr(self, k) != v:
-                    print 'cannot bypass, failed on field {0}'.format(k)
+                    raise TypeError('dispatch cannot bypass for edit, failed on field {0}'.format(k))
                     return False
         return True
 

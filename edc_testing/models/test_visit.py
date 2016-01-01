@@ -1,12 +1,12 @@
-from edc.entry_meta_data.models import MetaDataMixin
+from edc_meta_data.models import CrfMetaDataMixin
 from edc_visit_tracking.models import VisitModelMixin, PreviousVisitMixin
 
 
-class TestVisit(MetaDataMixin, PreviousVisitMixin, VisitModelMixin):
+class TestVisit(CrfMetaDataMixin, PreviousVisitMixin, VisitModelMixin):
 
     REQUIRES_PREVIOUS_VISIT = True
 
-    def custom_post_update_entry_meta_data(self):
+    def custom_post_update_crf_meta_data(self):
         pass
 
     def get_requires_consent(self):
@@ -16,11 +16,11 @@ class TestVisit(MetaDataMixin, PreviousVisitMixin, VisitModelMixin):
         app_label = 'edc_testing'
 
 
-class TestVisit2(MetaDataMixin, PreviousVisitMixin, VisitModelMixin):
+class TestVisit2(CrfMetaDataMixin, PreviousVisitMixin, VisitModelMixin):
 
     REQUIRES_PREVIOUS_VISIT = True
 
-    def custom_post_update_entry_meta_data(self):
+    def custom_post_update_crf_meta_data(self):
         pass
 
     def get_requires_consent(self):

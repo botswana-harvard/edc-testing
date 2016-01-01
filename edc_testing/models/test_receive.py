@@ -7,7 +7,7 @@ from lis.specimen.lab_receive.models import BaseReceive
 
 class TestReceive(BaseReceive):
 
-    registered_subject = models.ForeignKey(RegisteredSubject, null=True, related_name='test_receive')
+    registered_subject = models.ForeignKey(RegisteredSubject, null=True)
 
     requisition_model_name = models.CharField(max_length=25, null=True, editable=False)
 
