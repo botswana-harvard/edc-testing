@@ -2,7 +2,7 @@ from collections import OrderedDict
 
 from edc_constants.constants import REQUIRED, NOT_ADDITIONAL
 from edc_visit_schedule.classes import (
-    VisitScheduleConfiguration, CrfTuple, RequisitionPanelTuple, MembershipFormTuple, ScheduleGroupTuple)
+    VisitScheduleConfiguration, CrfTuple, RequisitionPanelTuple, MembershipFormTuple, ScheduleTuple)
 
 from ..models import TestVisit, TestVisit2, TestConsentWithMixin, TestAliquotType, TestPanel
 
@@ -21,10 +21,10 @@ class TestVisitSchedule(VisitScheduleConfiguration):
     })
 
     # schedule groups
-    # see edc_visit_schedule.models.schedule_groups
+    # see edc_visit_schedule.models.schedules
     # (name, membership_form, grouping_key, comment)
-    schedule_groups = OrderedDict({
-        'schedule-group-1': ScheduleGroupTuple('schedule-group-1', 'schedule-1', None, None),
+    schedules = OrderedDict({
+        'schedule-1': ScheduleTuple('schedule-1', 'schedule-1', None, None),
     })
 
     # visit_schedule
@@ -41,7 +41,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
             'window_upper_bound_unit': 'D',
             'grouping': 'group1',
             'visit_tracking_model': TestVisit,
-            'schedule_group': 'schedule-group-1',
+            'schedule': 'schedule-1',
             'instructions': None,
             'requisitions': (
                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
@@ -65,7 +65,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'window_upper_bound_unit': 'D',
              'grouping': 'group1',
              'visit_tracking_model': TestVisit,
-             'schedule_group': 'schedule-group-1',
+             'schedule': 'schedule-1',
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
@@ -88,7 +88,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'window_upper_bound_unit': 'D',
              'grouping': 'group2',
              'visit_tracking_model': TestVisit2,
-             'schedule_group': 'schedule-group-1',
+             'schedule': 'schedule-1',
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
@@ -111,7 +111,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'window_upper_bound_unit': 'D',
              'grouping': 'group2',
              'visit_tracking_model': TestVisit2,
-             'schedule_group': 'schedule-group-1',
+             'schedule': 'schedule-1',
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
@@ -134,7 +134,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'window_upper_bound_unit': 'D',
              'grouping': 'group2',
              'visit_tracking_model': TestVisit2,
-             'schedule_group': 'schedule-group-1',
+             'schedule': 'schedule-1',
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
@@ -157,7 +157,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'window_upper_bound_unit': 'D',
              'grouping': 'group2',
              'visit_tracking_model': TestVisit2,
-             'schedule_group': 'schedule-group-1',
+             'schedule': 'schedule-1',
              'instructions': None,
              'requisitions': (
                  # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
