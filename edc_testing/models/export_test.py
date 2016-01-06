@@ -5,7 +5,7 @@ from django.db import models
 from edc_base.model.models import BaseUuidModel
 from edc_constants.choices import YES_NO
 
-from edc.export.managers import ExportHistoryManager
+from edc_export.managers import ExportHistoryManager
 
 
 class ExportTest(BaseUuidModel):

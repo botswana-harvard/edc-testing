@@ -3,8 +3,8 @@ from datetime import datetime
 from django.db import models
 
 from edc_meta_data.managers import CrfMetaDataManager
-from edc.export.managers import ExportHistoryManager
-from edc.export.models import ExportTrackingFieldsMixin
+from edc_export.managers import ExportHistoryManager
+from edc_export.models import ExportTrackingFieldsMixin
 from edc_base.model.models import BaseUuidModel
 from edc_constants.choices import YES_NO
 
