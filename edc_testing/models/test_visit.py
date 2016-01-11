@@ -8,10 +8,9 @@ class TestVisit(OffStudyMixin, CrfMetaDataMixin, PreviousVisitMixin, VisitModelM
 
     off_study_model = ('edc_testing', 'TestOffStudy')
 
-    REQUIRES_PREVIOUS_VISIT = True
+    death_report_model = ('edc_testing', 'TestDeathReport')
 
-    def custom_post_update_crf_meta_data(self):
-        pass
+    REQUIRES_PREVIOUS_VISIT = True
 
     def get_requires_consent(self):
         return False
@@ -20,12 +19,13 @@ class TestVisit(OffStudyMixin, CrfMetaDataMixin, PreviousVisitMixin, VisitModelM
         app_label = 'edc_testing'
 
 
-class TestVisit2(CrfMetaDataMixin, PreviousVisitMixin, VisitModelMixin):
+class TestVisit2(CrfMetaDataMixin, OffStudyMixin, PreviousVisitMixin, VisitModelMixin):
 
     REQUIRES_PREVIOUS_VISIT = True
 
-    def custom_post_update_crf_meta_data(self):
-        pass
+    off_study_model = ('edc_testing', 'TestOffStudy')
+
+    death_report_model = ('edc_testing', 'TestDeathReport')
 
     def get_requires_consent(self):
         return False
