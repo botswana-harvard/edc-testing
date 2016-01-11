@@ -1,18 +1,16 @@
 from django.db import models
-from django.utils import timezone
 
 from edc_meta_data.managers import CrfMetaDataManager
+
+from edc_base.model.models import BaseUuidModel
+from edc_visit_tracking.models import CrfModelMixin
 
 from .test_visit import TestVisit
 
 
-class TestDeathReport(models.Model):
+class TestDeathReport(CrfModelMixin, BaseUuidModel):
 
     test_visit = models.OneToOneField(TestVisit)
-
-    report_datetime = models.DateTimeField(
-        verbose_name="Report Date",
-        default=timezone.now)
 
     entry_meta_data_manager = CrfMetaDataManager(TestVisit)
 

@@ -1,8 +1,12 @@
+from edc_base.model.models import BaseUuidModel
 from edc_meta_data.models import CrfMetaDataMixin
+from edc_offstudy.models import OffStudyMixin
 from edc_visit_tracking.models import VisitModelMixin, PreviousVisitMixin
 
 
-class TestVisit(CrfMetaDataMixin, PreviousVisitMixin, VisitModelMixin):
+class TestVisit(OffStudyMixin, CrfMetaDataMixin, PreviousVisitMixin, VisitModelMixin, BaseUuidModel):
+
+    off_study_model = ('edc_testing', 'TestOffStudy')
 
     REQUIRES_PREVIOUS_VISIT = True
 
