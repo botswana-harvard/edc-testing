@@ -1,9 +1,9 @@
 from django.db import models
 
 from edc_base.audit_trail import AuditTrail
-from edc_lab.lab_requisition.models import RequisitionModelMixin
 from edc_meta_data.managers import RequisitionMetaDataManager
-from edc_visit_tracking.models.crf_model_mixin import CrfModelMixin
+from edc_visit_tracking.models import CrfModelMixin
+from lab_requisition.models import RequisitionModelMixin
 
 from .test_aliquot import TestAliquot
 from .test_aliquot_type import TestAliquotType
