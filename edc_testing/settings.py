@@ -39,6 +39,22 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tastypie',
+    'edc_appointment',
+    'edc_base',
+    'edc_configuration',
+    'edc_consent',
+    'edc_content_type_map',
+    'edc_crypto_fields',
+    'edc_export',
+    'edc_lab.lab_clinic_api',
+    'edc_meta_data',
+    'edc_quota',
+    'edc_registration',
+    'edc_sync',
+    'edc_testing',
+    'edc_visit_schedule',
+    'edc_visit_tracking',
+    'lab_requisition',
 )
 
 MIDDLEWARE_CLASSES = (
