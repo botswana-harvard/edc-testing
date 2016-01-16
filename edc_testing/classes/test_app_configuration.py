@@ -71,7 +71,10 @@ class TestAppConfiguration(BaseAppConfiguration):
                  'aliquot_type': [AliquotTypeTuple('Whole Blood', 'WB', '02'),
                                   AliquotTypeTuple('Plasma', 'PL', '32'),
                                   AliquotTypeTuple('Buffy Coat', 'BC', '16')],
-                 'profile': [ProfileTuple('Viral Load', 'WB'), ProfileTuple('Genotyping', 'WB'), ProfileTuple('ELISA', 'WB')],
+                 'profile': [
+                     ProfileTuple('Viral Load', 'WB'),
+                     ProfileTuple('Genotyping', 'WB'),
+                     ProfileTuple('ELISA', 'WB')],
                  'profile_item': [ProfileItemTuple('Viral Load', 'PL', 1.0, 3),
                                   ProfileItemTuple('Viral Load', 'BC', 0.5, 1),
                                   ProfileItemTuple('Genotyping', 'PL', 1.0, 4),
@@ -79,8 +82,8 @@ class TestAppConfiguration(BaseAppConfiguration):
                                   ProfileItemTuple('ELISA', 'PL', 1.0, 1),
                                   ProfileItemTuple('ELISA', 'BC', 0.5, 1)]}}
 
-    labeling = {'label_printer': [LabelPrinterTuple('Zebra_Technologies_ZTC_GK420t', 'localhost', '127.0.0.1', True), ],
-                }
+    labeling = {'label_printer': [
+        LabelPrinterTuple('Zebra_Technologies_ZTC_GK420t', 'localhost', '127.0.0.1', True), ]}
 
     consent_catalogue_list = [consent_catalogue_setup]
 

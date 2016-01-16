@@ -5,9 +5,6 @@ from .test_aliquot_type import TestAliquotType
 from .test_consent import TestConsent, TestConsentWithMixin
 from .test_consent_no_rs import TestConsentNoRs
 from .test_m2m import TestM2m
-# from .test_dispatch import (
-#     TestDspItem, TestDspItemTwo, TestDspItemThree, TestDspList, TestDspItemM2M,
-#     TestDspItemBypass, TestDspContainer)
 from .test_foreign_key import TestForeignKey
 from .test_model import TestModel, TestModel1, TestModel2, TestModel3
 from .test_off_study import TestOffStudy
@@ -22,4 +19,4 @@ from .test_scheduled_model import (
 from .test_subject_locator import TestSubjectLocator
 from .test_subject_result_model import TestSubjectResultModel
 from .test_subject_uuid_model import TestSubjectUuidModel
-from .test_visit import *
+from .test_visit import TestVisit, TestVisit2, TestSubjectVisit, TestSubjectVisitTwo, TestSubjectVisitThree

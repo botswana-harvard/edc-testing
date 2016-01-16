@@ -1,10 +1,10 @@
 from collections import OrderedDict
 
-from edc_constants.constants import REQUIRED, NOT_ADDITIONAL
 from edc_visit_schedule.classes import (
-    VisitScheduleConfiguration, CrfTuple, RequisitionPanelTuple, MembershipFormTuple, ScheduleTuple)
+    VisitScheduleConfiguration, MembershipFormTuple, ScheduleTuple)
 
 from ..models import TestVisit, TestVisit2, TestConsentWithMixin, TestAliquotType, TestPanel
+from edc_testing.classes.entries import requisition_entries, crf_entries
 
 
 class TestVisitSchedule(VisitScheduleConfiguration):
@@ -14,21 +14,14 @@ class TestVisitSchedule(VisitScheduleConfiguration):
     panel_model = TestPanel
     aliquot_type_model = TestAliquotType
 
-    # membership forms
-    # see edc_visit_schedule.models.membership_forms
     membership_forms = OrderedDict({
         'schedule-1': MembershipFormTuple('schedule-1', TestConsentWithMixin, True),
     })
 
-    # schedule groups
-    # see edc_visit_schedule.models.schedules
-    # (name, membership_form, grouping_key, comment)
     schedules = OrderedDict({
         'schedule-1': ScheduleTuple('schedule-1', 'schedule-1', None, None),
     })
 
-    # visit_schedule
-    # see edc_visit_schedule.models.visit_defintion
     visit_definitions = OrderedDict(
         {'1000': {
             'title': '1000',
@@ -43,17 +36,8 @@ class TestVisitSchedule(VisitScheduleConfiguration):
             'visit_tracking_model': TestVisit,
             'schedule': 'schedule-1',
             'instructions': None,
-            'requisitions': (
-                # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),
-            ),
-            'entries': (
-                CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-            )},
+            'requisitions': requisition_entries,
+            'entries': crf_entries},
          '2000': {
              'title': '2000',
              'time_point': 1,
@@ -67,16 +51,8 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'visit_tracking_model': TestVisit,
              'schedule': 'schedule-1',
              'instructions': None,
-             'requisitions': (
-                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
-             'entries': (
-                 CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-             )},
+             'requisitions': requisition_entries,
+             'entries': crf_entries},
          '2000A': {
              'title': '2000A',
              'time_point': 0,
@@ -90,16 +66,8 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'visit_tracking_model': TestVisit2,
              'schedule': 'schedule-1',
              'instructions': None,
-             'requisitions': (
-                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
-             'entries': (
-                 CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-             )},
+             'requisitions': requisition_entries,
+             'entries': crf_entries},
          '2010A': {
              'title': '2010A',
              'time_point': 1,
@@ -113,16 +81,8 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'visit_tracking_model': TestVisit2,
              'schedule': 'schedule-1',
              'instructions': None,
-             'requisitions': (
-                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
-             'entries': (
-                 CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-             )},
+             'requisitions': requisition_entries,
+             'entries': crf_entries},
          '2020A': {
              'title': '2020A',
              'time_point': 2,
@@ -136,16 +96,8 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'visit_tracking_model': TestVisit2,
              'schedule': 'schedule-1',
              'instructions': None,
-             'requisitions': (
-                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
-             'entries': (
-                 CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-             )},
+             'requisitions': requisition_entries,
+             'entries': crf_entries},
          '2030A': {
              'title': '2030A',
              'time_point': 3,
@@ -159,15 +111,7 @@ class TestVisitSchedule(VisitScheduleConfiguration):
              'visit_tracking_model': TestVisit2,
              'schedule': 'schedule-1',
              'instructions': None,
-             'requisitions': (
-                 # (entry_order, app_label, model_name, panel.name, panel.panel_type, aliquot_type)
-                 RequisitionPanelTuple(10L, u'edc_testing', u'testrequisition', 'Research Blood Draw', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(20L, u'edc_testing', u'testrequisition', 'Viral Load', 'TEST', 'WB', REQUIRED, NOT_ADDITIONAL),
-                 RequisitionPanelTuple(30L, u'edc_testing', u'testrequisition', 'Microtube', 'STORAGE', 'WB', REQUIRED, NOT_ADDITIONAL),),
-             'entries': (
-                 CrfTuple(10L, u'edc_testing', u'TestScheduledModel1', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(20L, u'edc_testing', u'TestScheduledModel2', REQUIRED, NOT_ADDITIONAL),
-                 CrfTuple(30L, u'edc_testing', u'TestScheduledModel3', REQUIRED, NOT_ADDITIONAL),
-             )},
+             'requisitions': requisition_entries,
+             'entries': crf_entries},
          },
     )

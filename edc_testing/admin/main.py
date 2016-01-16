@@ -1,6 +1,10 @@
 from django.contrib import admin
+
 from edc_base.modeladmin.admin import BaseModelAdmin
-from ..models import TestScheduledModel, TestScheduledModel1, TestScheduledModel2, TestScheduledModel3, TestSubjectLocator, EncryptedTestModel
+
+from ..models import (
+    TestScheduledModel, TestScheduledModel1, TestScheduledModel2, TestScheduledModel3,
+    TestSubjectLocator, EncryptedTestModel)
 
 
 class TestScheduledModelAdmin(BaseModelAdmin):
