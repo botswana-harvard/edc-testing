@@ -12,14 +12,11 @@ class TestVisit(OffStudyMixin, CrfMetaDataMixin, PreviousVisitMixin, VisitModelM
 
     REQUIRES_PREVIOUS_VISIT = True
 
-    def get_requires_consent(self):
-        return False
-
     class Meta:
         app_label = 'edc_testing'
 
 
-class TestVisit2(CrfMetaDataMixin, OffStudyMixin, PreviousVisitMixin, VisitModelMixin):
+class TestVisit2(CrfMetaDataMixin, OffStudyMixin, PreviousVisitMixin, VisitModelMixin, BaseUuidModel):
 
     REQUIRES_PREVIOUS_VISIT = True
 
@@ -27,35 +24,23 @@ class TestVisit2(CrfMetaDataMixin, OffStudyMixin, PreviousVisitMixin, VisitModel
 
     death_report_model = ('edc_testing', 'TestDeathReport')
 
-    def get_requires_consent(self):
-        return False
+    class Meta:
+        app_label = 'edc_testing'
+
+
+class TestSubjectVisit(VisitModelMixin, BaseUuidModel):
 
     class Meta:
         app_label = 'edc_testing'
 
 
-class TestSubjectVisit(VisitModelMixin):
-
-    def get_requires_consent(self):
-        return False
+class TestSubjectVisitTwo(VisitModelMixin, BaseUuidModel):
 
     class Meta:
         app_label = 'edc_testing'
 
 
-class TestSubjectVisitTwo(VisitModelMixin):
-
-    def get_requires_consent(self):
-        return False
-
-    class Meta:
-        app_label = 'edc_testing'
-
-
-class TestSubjectVisitThree(VisitModelMixin):
-
-    def get_requires_consent(self):
-        return False
+class TestSubjectVisitThree(VisitModelMixin, BaseUuidModel):
 
     class Meta:
         app_label = 'edc_testing'
