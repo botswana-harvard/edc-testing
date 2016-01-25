@@ -10,15 +10,11 @@ class TestVisit(OffStudyMixin, CrfMetaDataMixin, PreviousVisitMixin, VisitModelM
 
     death_report_model = ('edc_testing', 'TestDeathReport')
 
-    REQUIRES_PREVIOUS_VISIT = True
-
     class Meta:
         app_label = 'edc_testing'
 
 
 class TestVisit2(CrfMetaDataMixin, OffStudyMixin, PreviousVisitMixin, VisitModelMixin, BaseUuidModel):
-
-    REQUIRES_PREVIOUS_VISIT = True
 
     off_study_model = ('edc_testing', 'TestOffStudy')
 
